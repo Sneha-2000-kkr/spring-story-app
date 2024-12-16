@@ -29,10 +29,10 @@ public class StoryController {
         return storyService.saveStory(story);
     }
 
-    @PutMapping("/{id}")
-    public Story updateStory(@PathVariable String id, @RequestBody Story story) {
-        return storyService.updateStory(id, story);
-    }
+//    @PutMapping("/{id}")
+//    public Story updateStory(@PathVariable String id, @RequestBody Story story) {
+//        return storyService.updateStory(id, story);
+//    }
 
     @DeleteMapping("/{id}")
     public void deleteStory(@PathVariable String id) {

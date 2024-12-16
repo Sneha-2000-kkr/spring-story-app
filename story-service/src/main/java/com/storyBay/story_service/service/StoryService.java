@@ -2,7 +2,7 @@ package com.storyBay.story_service.service;
 
 
 import com.storyBay.story_service.model.Story;
-import com.storyBay.story_service.repository.StoryRepo;
+import com.storyBay.story_service.repository.StoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +12,11 @@ import java.util.List;
 public class StoryService {
 
     @Autowired
-    private StoryRepo storyRepository;
+    private StoryRepository storyRepository;
     @Autowired
     private Story story;
+
+
 
     public List<Story> getAllStories() {
         return storyRepository.findAllStories();
@@ -28,10 +30,10 @@ public class StoryService {
         return storyRepository.saveStory(story);
     }
 
-    public Story updateStory(String id, Story story) {
-        story.setStoryId(id);
-        return storyRepository.saveStory(story);
-    }
+//    public Story updateStory(String id, Story story) {
+//        story.setStoryId(id);
+//        return storyRepository.saveStory(story);
+//    }
 
     public void deleteStory(String id) {
         storyRepository.deleteStoryById(id);
