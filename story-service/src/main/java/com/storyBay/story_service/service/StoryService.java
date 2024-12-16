@@ -17,24 +17,24 @@ public class StoryService {
     private Story story;
 
     public List<Story> getAllStories() {
-        return storyRepository.findAll();
+        return storyRepository.findAllStories();
     }
 
     public Story getStoryById(String id) {
-        return storyRepository.findById(id);
+        return storyRepository.findStoryById(id);
     }
 
     public Story saveStory(Story story) {
-        return storyRepository.save(story);
+        return storyRepository.saveStory(story);
     }
 
     public Story updateStory(String id, Story story) {
         story.setStoryId(id);
-        return storyRepository.save(story);
+        return storyRepository.saveStory(story);
     }
 
     public void deleteStory(String id) {
-        storyRepository.deleteById(id);
+        storyRepository.deleteStoryById(id);
     }
 
 }
