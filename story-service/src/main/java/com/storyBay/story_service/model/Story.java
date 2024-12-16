@@ -1,8 +1,10 @@
 package com.storyBay.story_service.model;
 
-import lombok.Data;
+import com.mongodb.lang.NonNull;
+import com.storyBay.story_service.enums.StoryStatus;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -11,7 +13,10 @@ import java.util.Date;
 @Setter
 @Component
 public class Story {
+    @Id
     String storyId;
+
+    @NonNull
     String titleName;
     String storyContent;
     StoryStatus status;

@@ -1,4 +1,4 @@
-package com.storyBay.story_service.model;
+package com.storyBay.story_service.enums;
 
 public enum StoryStatus {
     PENDING,

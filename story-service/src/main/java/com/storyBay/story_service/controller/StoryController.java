@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/stories")
+@RequestMapping("/api/story")
 public class StoryController {
 
     @Autowired
     private StoryService storyService;
 
-    @GetMapping("/allStories")
+    @GetMapping("/")
     public List<Story> getAllStories() {
         return storyService.getAllStories();
     }
