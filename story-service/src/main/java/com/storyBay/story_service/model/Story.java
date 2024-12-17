@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 import java.util.Date;
 
-@Component
 
 public class Story {
     @Id

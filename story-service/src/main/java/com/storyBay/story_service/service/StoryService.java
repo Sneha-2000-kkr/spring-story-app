@@ -28,6 +28,7 @@ public class StoryService {
 
     public Story saveStory(Story story) {
         return storyRepository.saveStory(story);
+
     }
 
 //    public Story updateStory(String id, Story story) {
